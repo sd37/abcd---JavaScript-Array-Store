@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest
+END
+cookies.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/cookies.php
+END
+dumper.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/dumper.php
+END
+shell_tester.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/shell_tester.php
+END
+reporter.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/reporter.php
+END
+url.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/url.php
+END
+web_tester.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/web_tester.php
+END
+compatibility.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/compatibility.php
+END
+test_case.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/test_case.php
+END
+tag.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/tag.php
+END
+authentication.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/authentication.php
+END
+exceptions.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/exceptions.php
+END
+expectation.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/expectation.php
+END
+reflection_php4.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/reflection_php4.php
+END
+reflection_php5.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/reflection_php5.php
+END
+collector.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/collector.php
+END
+socket.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/socket.php
+END
+simpletest.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/simpletest.php
+END
+remote.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/remote.php
+END
+user_agent.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/user_agent.php
+END
+parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/parser.php
+END
+autorun.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/autorun.php
+END
+scorer.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/scorer.php
+END
+xml.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/xml.php
+END
+detached.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/detached.php
+END
+mock_objects.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/mock_objects.php
+END
+form.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/form.php
+END
+kw_web_tester.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/kw_web_tester.php
+END
+unit_tester.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/unit_tester.php
+END
+default_reporter.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/default_reporter.php
+END
+errors.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/errors.php
+END
+page.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/page.php
+END
+invoker.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/invoker.php
+END
+frames.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/frames.php
+END
+http.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/http.php
+END
+selector.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/selector.php
+END
+browser.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/browser.php
+END
+eclipse.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/eclipse.php
+END
+encoding.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/simpletest/encoding.php
+END

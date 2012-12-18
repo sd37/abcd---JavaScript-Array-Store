@@ -1,0 +1,170 @@
+<?php
+/*=========================================================================
+
+  Program:   CDash - Cross-Platform Dashboard System
+  Module:    $Id: clientjob.php 2067 2009-12-10 14:16:50Z jjomier $
+  Language:  PHP
+  Date:      $Date: 2009-12-10 14:16:50 +0000 (Thu, 10 Dec 2009) $
+  Version:   $Revision: 2067 $
+
+  Copyright (c) 2002 Kitware, Inc.  All rights reserved.
+  See Copyright.txt or http://www.cmake.org/HTML/Copyright.html for details.
+
+     This software is distributed WITHOUT ANY WARRANTY; without even
+     the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+     PURPOSE.  See the above copyright notices for more information.
+
+=========================================================================*/
+include_once('models/constants.php');
+
+class ClientJob
+{
+  var $Id;
+  var $ScheduleId;
+  var $OsId;
+  var $SiteId;
+  var $StartDate;
+  var $EndDate;
+  var $Status;
+  var $CMakeId;
+  var $CompilerId;
+
+  /** Get ScheduleId */
+  function GetScheduleId()
+    {
+    if(!$this->Id)
+      {
+      add_log("ClientJob::GetScheduleId()","Id not set");
+      return;
+      }
+    $sys = pdo_query("SELECT scheduleid FROM client_job WHERE id=".qnum($this->Id));
+    $row = pdo_fetch_array($sys);
+    return $row[0];
+    }
+    
+  /** Get StartingDate */
+  function GetStartDate()
+    {
+    if(!$this->Id)
+      {
+      add_log("ClientJob::GetStartDate","Id not set");
+      return;
+      }
+    $sys = pdo_query("SELECT startdate FROM client_job WHERE id=".qnum($this->Id));
+    $row = pdo_fetch_array($sys);
+    return $row[0];
+    }
+
+  /** Get End Date */
+  function GetEndDate()
+    {
+    if(!$this->Id)
+      {
+      add_log("ClientJob::GetEndDate","Id not set");
+      return;
+      }
+    $sys = pdo_query("SELECT enddate FROM client_job WHERE id=".qnum($this->Id));
+    $row = pdo_fetch_array($sys);
+    return $row[0];
+    }
+      
+  /** Get the compiler id for the job */
+  function GetCompiler()
+    {
+    if(!$this->Id)
+      {
+      add_log("ClientJob::GetCompiler","Id not set");
+      return;
+      }
+    $sys = pdo_query("SELECT compilerid FROM client_job WHERE id=".qnum($this->Id));
+    $row = pdo_fetch_array($sys);
+    return $row[0];
+    }
+    
+  /** Get Status */
+  function GetStatus()
+    {
+    if(!$this->Id)
+      {
+      add_log("ClientJob::GetStatus","Id not set");
+      return;
+      }
+    $sys = pdo_query("SELECT status FROM client_job WHERE id=".qnum($this->Id));
+    $row = pdo_fetch_array($sys);
+    return $row[0];
+    }
+    
+  /** Get CMakeId */
+  function GetCMakeId()
+    {
+    if(!$this->Id)
+      {
+      add_log("ClientJob::GetCMakeId","Id not set");
+      return;
+      }
+    $sys = pdo_query("SELECT cmakeid FROM client_job WHERE id=".qnum($this->Id));
+    $row = pdo_fetch_array($sys);
+    return $row[0];
+    }
+  
+  /** Get Site */
+  function GetSite()
+    {
+    if(!$this->Id)
+      {
+      add_log("ClientJob::GetSite","Id not set");
+      return;
+      }
+    $sys = pdo_query("SELECT siteid FROM client_job WHERE id=".qnum($this->Id));
+    $row = pdo_fetch_array($sys);
+    return $row[0];
+    }
+      
+  /** Set the job has finished */
+  function SetFinished()
+    {
+    $now = date('Y-m-d H:i:s');
+    $sql = "UPDATE client_job SET status=".CDASH_JOB_FINISHED.",enddate='".$now."' WHERE siteid=".$this->SiteId." AND status=".CDASH_JOB_RUNNING;
+    pdo_query($sql);
+    add_last_sql_error("ClientJob::SetFinished");
+    }
+      
+  /** Save a job */  
+  function Save()
+    {     
+    $sql = "INSERT INTO client_job (scheduleid,osid,siteid,startdate,enddate,status,output,cmakeid,compilerid) 
+            VALUES ('".$this->ScheduleId."','".$this->OsId."','".$this->SiteId."','".$this->StartDate."','".$this->EndDate
+            ."','".$this->Status."','".$this->Output."','".$this->CMakeId."','".$this->CompilerId."')";
+    pdo_query($sql);
+    $this->Id = pdo_insert_id('client_job');
+    add_last_sql_error("ClientJob::Save");
+    }   // end Save
+   
+   
+   /** Remove a job */  
+  function Remove()
+    {   
+    if(!$this->Id)
+      {
+      add_log("ClientJob::Remove()","Id not set");
+      return;
+      }
+    pdo_query("DELETE FROM client_job WHERE id=".qnum($this->Id));
+    add_last_sql_error("ClientJob::Remove");
+    }   // end Remove
+  
+  /** */
+  function getAll($userid,$nresult)
+    {
+    $query=pdo_query("SELECT j.id FROM client_job as j,client_jobschedule AS s 
+                      WHERE j.scheduleid=s.id AND s.userid='$userid' ORDER BY j.id DESC LIMIT $nresult");   
+    add_last_sql_error("ClientJob::getAll");
+    $result=array();
+    while($row = pdo_fetch_array($query))
+      {
+      $result[] = $row['id'];
+      }
+    return $result;
+    }
+  
+} // end class proJob

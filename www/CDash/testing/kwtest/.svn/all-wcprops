@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest
+END
+kw_test_manager.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/kw_test_manager.php
+END
+kw_cdash_xml.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/kw_cdash_xml.php
+END
+kw_web_tester.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/kw_web_tester.php
+END
+kw_db.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/kw_db.php
+END
+kw_html_reporter.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/kwtest/kw_html_reporter.php
+END

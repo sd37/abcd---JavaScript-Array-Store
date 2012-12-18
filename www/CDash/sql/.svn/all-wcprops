@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql
+END
+mysqlcompat.patch
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/mysqlcompat.patch
+END
+convert_alter_table.pl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/convert_alter_table.pl
+END
+convert.sh
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/convert.sh
+END

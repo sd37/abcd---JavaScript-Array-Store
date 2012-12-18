@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/EmailProjectExample
+END
+2_build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/EmailProjectExample/2_build.xml
+END
+2_test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/EmailProjectExample/2_test.xml
+END
+1_configure.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/EmailProjectExample/1_configure.xml
+END
+2_update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/EmailProjectExample/2_update.xml
+END
+cdash_1.log
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/EmailProjectExample/cdash_1.log
+END
+cdash_2.log
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/EmailProjectExample/cdash_2.log
+END
+1_build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/EmailProjectExample/1_build.xml
+END
+1_test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/EmailProjectExample/1_test.xml
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data
+END
+git-Update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/git-Update.xml
+END
+CompressedTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/CompressedTest.xml
+END

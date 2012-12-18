@@ -1,0 +1,399 @@
+* Extra verbosity turned on
+Reading Script: /build/p4-trunk/p4trunk/cdash/P4_DashboardSubmission.cmake
+SetCTestConfiguration:SourceDirectory:/build/p4-trunk/p4trunk
+SetCTestConfiguration:BuildDirectory:/build/p4-trunk/p4trunk
+Run dashboard with model Continuous
+   Source directory: ./
+   Build directory: ./
+   Reading ctest configuration file: /build/p4-trunk/p4trunk/CTestConfig.cmake
+SetCTestConfigurationFromCMakeVariable:NightlyStartTime:CTEST_NIGHTLY_START_TIMESetCTestConfiguration:NightlyStartTime:00:00:00 UTC
+SetCTestConfigurationFromCMakeVariable:Site:CTEST_SITESetCTestConfiguration:Site:domU-12-31-39-14-62-60
+SetCTestConfigurationFromCMakeVariable:BuildName:CTEST_BUILD_NAMESetCTestConfiguration:BuildName:paradigm4
+   Site: domU-12-31-39-14-62-60
+   Build name: paradigm4
+   Use Continuous tag: 20111008-0218
+SetCTestConfiguration:SourceDirectory:/build/p4-trunk/p4trunk
+SetCTestConfigurationFromCMakeVariable:UpdateCommand:CTEST_UPDATE_COMMANDSetCTestConfiguration:UpdateCommand:/usr/bin/svn
+SetCTestConfigurationFromCMakeVariable:SVNCommand:CTEST_SVN_COMMANDSetCTestConfiguration:SVNCommand:/usr/bin/svn
+SetCTestConfiguration:BuildDirectory:/build/p4-trunk/p4trunk
+SetCTestConfiguration:SourceDirectory:/build/p4-trunk/p4trunk
+   Updating the repository: /build/p4-trunk/p4trunk
+   Use SVN repository type
+   Old revision of repository is: 445
+   New revision of repository is: 445
+   Gathering version information (one . per revision):
+    
+   Found 1 locally modified files
+   There are modified or conflicting files in the repository
+SetCTestConfiguration:BuildDirectory:/build/p4-trunk/p4trunk
+SetCTestConfiguration:SourceDirectory:/build/p4-trunk/p4trunk
+SetCTestConfiguration:ConfigureCommand:/usr/local/bin/cmake  -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/Continuous ./
+SetCTestConfiguration:BuildDirectory:/build/p4-trunk/p4trunk
+SetCTestConfiguration:SourceDirectory:/build/p4-trunk/p4trunk
+Configure project
+Configure with command: /usr/local/bin/cmake  -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/Continuous ./
+Run command: "/usr/local/bin/cmake" "-DCMAKE_BUILD_TYPE=Release" "-DCMAKE_INSTALL_PREFIX=/opt/Continuous" "./"
+   Each . represents 1024 bytes of output
+    .-- CMAKE_INSTALL_PREFIX not Initialized to default keeping: /opt/Continuous
+-- GPB - /usr/lib/libprotobuf.so
+-- LOG4CXX - /usr/lib/liblog4cxx.so
+-- Build type (use -DCMAKE_BUILD_TYPE=[RelWithDebInfo]/Debug/Release/Profile/CC): Release
+-- SCIDB_SOURCE_DIR: /build/scidb-trunk/trunk
+-- SCIDB_BUILD_DIR: /build/scidb-trunk/trunk
+-- SCIDB_BIN_DIR: /build/scidb-trunk/trunk/bin
+-- GENERAL_OUTPUT_DIRECTORY: /build/p4-trunk/p4trunk
+-- GPB - /usr/lib/libprotobuf.so
+-- LOG4CXX - /usr/lib/liblog4cxx.so
+-- R_INCLUDE_DIRS is /usr/local/lib64/R/include
+-- Found SWIG: /usr/local/bin/swig (found suitable version "2.0.3", required is "2.0")
+-- SWIG and R found. Will attempt R connector build.
+-- Configuring /build/p4-trunk/p4trunk/linear_algebra/P4Constants.cpp.in as /build/p4-trunk/p4trunk/linear_algebra/P4Constants.cpp
+-- Configuring /build/p4-trunk/p4trunk/system/P4Constants.cpp.in as /build/p4-trunk/p4trunk/system/P4Constants.cpp
+-- R_FOUND is TRUE
+-- SWIG and R present.  Attempting build of scidb package for R/R Connector
+.-- Found SWIG: /usr/local/bin/swig (found version "2.0.3")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /build/p4-trunk/p4trunk
+ Size of output: 1K
+Command exited with the value: 0
+SetCTestConfiguration:MakeCommand:/usr/bin/make -j3 install
+SetCTestConfiguration:BuildDirectory:/build/p4-trunk/p4trunk
+SetCTestConfiguration:SourceDirectory:/build/p4-trunk/p4trunk
+Build project
+MakeCommand:/usr/bin/make -j3 install
+Run command: "/usr/bin/make" "-j3" "install"
+   Each symbol represents 1024 bytes of output.
+   '!' represents an error and '*' a warning.
+    .[  1%] [  3%] Running protocol buffer compiler on /build/p4-trunk/p4trunk/proto/p4_msg.proto
+Swig source
+Scanning dependencies of target p4_msg_lib
+[  5%] Building CXX object proto/CMakeFiles/p4_msg_lib.dir/p4_msg.pb.cc.o
+Scanning dependencies of target linear_algebra
+[  6%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/Aggregates.cpp.o
+/build/scidb-trunk/trunk/include/array/MemArray.h:500: Warning 325: Nested struct not currently supported (SparseChunkHeader ignored)
+/build/scidb-trunk/trunk/include/array/Array.h:638: Warning 401: Nothing known about base class 'SelfStatistics'. Ignored.
+/build/p4-trunk/p4trunk/proto/p4_msg.pb.cc: In copy constructor ‘p4_msg::HeartBeat_HB::HeartBeat_HB(const p4_msg::HeartBeat_HB&)’:
+/build/p4-trunk/p4trunk/proto/p4_msg.pb.cc:135: warning: base class ‘class google::protobuf::Message’ should be explicitly initialized in the copy constructor
+*/build/p4-trunk/p4trunk/proto/p4_msg.pb.cc: In copy constructor ‘p4_msg::HeartBeat::HeartBeat(const p4_msg::HeartBeat&)’:
+/build/p4-trunk/p4trunk/proto/p4_msg.pb.cc:413: warning: base class ‘class google::protobuf::Message’ should be explicitly initialized in the copy constructor
+Linking CXX static library libp4_msg_lib.a
+[  6%] Built target p4_msg_lib
+[  8%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/plugin.cpp.o
+/build/scidb-trunk/trunk/include/array/Metadata.h:245: Warning 503: Can't wrap 'operator <<' unless renamed to a valid identifier.
+/build/scidb-trunk/trunk/include/array/Metadata.h:414: Warning 503: Can't wrap 'operator Coordinates' unless renamed to a valid identifier.
+Scanning dependencies of target p4_system
+[ 10%] Building CXX object system/CMakeFiles/p4_system.dir/plugin.cpp.o
+constantWrapper   : int BUILTIN_TYPE_CNT = 16
+Scanning dependencies of target scidbrapi
+[ 11%] Building CXX object clientApiR/CMakeFiles/scidbrapi.dir/scidbrapiR_wrap.cxx.o
+In file included from /build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1381:
+*/build/scidb-trunk/trunk/include/query/TypeSystem.h:85:1: warning: "IS_NUMERIC" redefined
+In file included from /build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:743:
+/usr/local/lib64/R/include/Rdefines.h:62:1: warning: this is the location of the previous definition
+[ 13%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/P4Constants.cpp.o
+[ 15%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalMetrics.cpp.o
+[ 16%] Building CXX object system/CMakeFiles/p4_system.dir/NodeLivenessManager.cpp.o
+[ 18%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalMetrics.cpp.o
+[ 20%] Building CXX object system/CMakeFiles/p4_system.dir/P4Constants.cpp.o
+Linking CXX shared library ../plugins/libp4_system.so
+[ 20%] Built target p4_system
+[ 21%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalSolve.cpp.o
+[ 23%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalSolve.cpp.o
+[ 25%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/CSArrays.cpp.o
+*[ 26%] Building CXX object clientApiR/CMakeFiles/scidbrapi.dir/scidbrapiUtil.cpp.o
+[ 28%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalCS.cpp.o
+[ 30%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalCS.cpp.o
+[ 31%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalCP.cpp.o
+[ 33%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalCP.cpp.o
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx: In function ‘SEXPREC* R_swig_CoordinateVec___setslice__(SEXPREC*, SEXPREC*, SEXPREC*, SEXPREC*)’:
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1003: warning: dereferencing pointer ‘p.10789’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1012: warning: dereferencing pointer ‘p.10789’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1016: warning: dereferencing pointer ‘p.10789’ does break strict-aliasing rules
+*/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1020: warning: dereferencing pointer ‘p.10789’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1869: note: initialized from here
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx: In function ‘SEXPREC* R_swig_ConstArrayIteratorVec___setslice__(SEXPREC*, SEXPREC*, SEXPREC*, SEXPREC*)’:
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1003: warning: dereferencing pointer ‘p.10774’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1012: warning: dereferencing pointer ‘p.10774’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1016: warning: dereferencing pointer ‘p.10774’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1020: warning: dereferencing pointer ‘p.10774’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1869: note: initialized from here
+*/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx: In function ‘SEXPREC* R_swig_AttributeDescVec___setslice__(SEXPREC*, SEXPREC*, SEXPREC*, SEXPREC*)’:
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1003: warning: dereferencing pointer ‘p.10767’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1012: warning: dereferencing pointer ‘p.10767’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1016: warning: dereferencing pointer ‘p.10767’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1020: warning: dereferencing pointer ‘p.10767’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1869: note: initialized from here
+*/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx: In function ‘SEXPREC* R_swig_DimensionDescVec___setslice__(SEXPREC*, SEXPREC*, SEXPREC*, SEXPREC*)’:
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1003: warning: dereferencing pointer ‘p.10760’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1012: warning: dereferencing pointer ‘p.10760’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1016: warning: dereferencing pointer ‘p.10760’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1020: warning: dereferencing pointer ‘p.10760’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1869: note: initialized from here
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx: In function ‘SEXPREC* R_swig_TypeIdVec___setslice__(SEXPREC*, SEXPREC*, SEXPREC*, SEXPREC*)’:
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1003: warning: dereferencing pointer ‘p.10796’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1012: warning: dereferencing pointer ‘p.10796’ does break strict-aliasing rules
+*/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1016: warning: dereferencing pointer ‘p.10796’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1020: warning: dereferencing pointer ‘p.10796’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1869: note: initialized from here
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx: In function ‘SEXPREC* R_swig_ConstChunkIteratorVec___setslice__(SEXPREC*, SEXPREC*, SEXPREC*, SEXPREC*)’:
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1003: warning: dereferencing pointer ‘p.10781’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1012: warning: dereferencing pointer ‘p.10781’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1016: warning: dereferencing pointer ‘p.10781’ does break strict-aliasing rules
+*/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1020: warning: dereferencing pointer ‘p.10781’ does break strict-aliasing rules
+/build/p4-trunk/p4trunk/clientApiR/scidbrapiR_wrap.cxx:1869: note: initialized from here
+Linking CXX shared module libscidbrapi.so
+[ 35%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalRank.cpp.o
+make[3]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+made all.so -- R_wrap + Util + libscidbclient
+libscidbrapi.so:                 U _ZN5scidb12SharedBuffer8allocateEm
+/build/scidb-trunk/trunk
+/build/scidb-trunk/trunk/bin/libscidbclient.so
+-rwxr-xr-x 1 scidb users 2155818 2011-10-07 19:35 /build/scidb-trunk/trunk/bin/libscidbclient.so
+pre-populated SOURCE/scidbrapi = the R source package which is a directory tree
+added DSOs to scidbrapi/src/
+added extra copy of DSOs to scidbrapi/inst/libsNonstandard
+added scidbrapi/R/scidbrapi.R
+added scidbrapi/R/scidb.R
+added scidbrapi/R/zzz.R, the R file that is called on package load to load the appropriate libraries into R
+*-----------source package directory scidbrapi ready ------------
+The source package directory scidbrapi should not leave P4 premises.
+You want to give the user the scidb-xxx.tar.gz file instead.
+* checking for file ‘scidbrapi/DESCRIPTION’ ... OK
+* preparing ‘scidbrapi’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files
+* checking for empty or unneeded directories
+Removed empty directory ‘scidbrapi/libs’
+* building ‘scidbrapi_0.01.tar.gz’
+[ 36%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalRank.cpp.o
+
+End-user install instructions:
+The file to send to the user is /build/p4-trunk/p4trunk/plugins/scidbrapi_0.01.tar.gz
+Then on the client system, do:
+sudo R CMD INSTALL scidbrapi_0.01.tar.gz
+[ 36%] Built target scidbrapi
+[ 38%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalAverageRank.cpp.o
+[ 40%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalAverageRank.cpp.o
+[ 41%] .Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalQuantile.cpp.o
+[ 43%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalQuantile.cpp.o
+[ 45%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/covar/LogicalCovar.cpp.o
+[ 46%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/covar/PhysicalCovar.cpp.o
+[ 48%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/covariance/LogicalCovariance.cpp.o
+/build/scidb-trunk/trunk/include/query/TypeSystem.h: In function ‘boost::shared_ptr<std::vector<scidb::Value, std::allocator<scidb::Value> > > p4::collectSortedMultiVector(boost::shared_ptr<scidb::Array>, scidb::AttributeID, boost::shared_ptr<scidb::Query>)’:
+/build/scidb-trunk/trunk/include/query/TypeSystem.h:644: warning: dereferencing pointer ‘<anonymous>’ does break strict-aliasing rules
+/build/scidb-trunk/trunk/include/query/TypeSystem.h:644: note: initialized from here
+[ 50%] *Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/covariance/PhysicalCovariance.cpp.o
+[ 51%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/pearson/LogicalPearson.cpp.o
+[ 53%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/pearson/PhysicalPearson.cpp.o
+/build/p4-trunk/p4trunk/linear_algebra/pearson/PhysicalPearson.cpp: In member function ‘virtual void p4::PhysicalPearson::PearsonJob::run()’:
+/build/p4-trunk/p4trunk/linear_algebra/pearson/PhysicalPearson.cpp:42: warning: ‘stdev.void (p4::PhysicalPearson::*)(p4::PhysicalPearson::calculateData&)::__pfn’ may be used uninitialized in this function
+/build/p4-trunk/p4trunk/linear_algebra/pearson/PhysicalPearson.cpp:43: warning: ‘result.void (p4::PhysicalPearson::*)(p4::PhysicalPearson::calculateData&)::__pfn’ may be used uninitialized in this function
+[ 55%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/euclidean/LogicalEuclidean.cpp.o
+*/build/p4-trunk/p4trunk/linear_algebra/pearson/PhysicalPearson.cpp: In member function ‘virtual boost::shared_ptr<scidb::Array> p4::PhysicalPearson::execute(std::vector<boost::shared_ptr<scidb::Array>, std::allocator<boost::shared_ptr<scidb::Array> > >&, boost::shared_ptr<scidb::Query>)’:
+/build/p4-trunk/p4trunk/linear_algebra/pearson/PhysicalPearson.cpp:504: warning: ‘_useFlag’ may be used uninitialized in this function
+[ 56%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/euclidean/PhysicalEuclidean.cpp.o
+[ 58%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/manhattan/LogicalManhattan.cpp.o
+[ 60%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/manhattan/PhysicalManhattan.cpp.o
+[ 61%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/kendall/LogicalKendall.cpp.o
+[ 63%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/kendall/PhysicalKendall.cpp.o
+[ 65%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/spearman/LogicalSpearman.cpp.o
+[ 66%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/spearman/PhysicalSpearman.cpp.o
+.[ 68%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/ssvd/ssvdNormLogical.cpp.o
+[ 70%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/ssvd/ssvdNormPhysical.cpp.o
+[ 71%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/correlation/LogicalCorrelation.cpp.o
+/build/p4-trunk/p4trunk/linear_algebra/ssvd/ssvdNormPhysical.cpp: In member function ‘virtual boost::shared_ptr<scidb::Array> p4::ssvdNormPhysical::execute(std::vector<boost::shared_ptr<scidb::Array>, std::allocator<boost::shared_ptr<scidb::Array> > >&, boost::shared_ptr<scidb::Query>)’:
+/build/p4-trunk/p4trunk/linear_algebra/ssvd/ssvdNormPhysical.cpp:250: warning: unused variable ‘tmpx’
+[ 73%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/correlation/PhysicalCorrelation.cpp.o
+[ 75%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/matrix.cpp.o
+[ 76%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/misc.cpp.o
+[ 78%] *Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/Bidiag.cpp.o
+[ 80%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/qr.cpp.o
+[ 81%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LinRegr.cpp.o
+[ 83%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalLinRegr.cpp.o
+[ 85%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalLinRegr.cpp.o
+[ 86%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogistRegr.cpp.o
+[ 88%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalLogistRegr.cpp.o
+[ 90%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalLogistRegr.cpp.o
+[ 91%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/SingularValues.cpp.o
+[ 93%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/SingularVectors.cpp.o
+[ 95%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/LogicalSVD.cpp.o
+*/build/p4-trunk/p4trunk/linear_algebra/LinRegr.cpp: In function ‘int p4::linearRegression(Matrix&, Vector&, p4::LinRegr&, int, int, int, void*)’:
+/build/p4-trunk/p4trunk/linear_algebra/LinRegr.cpp:49: warning: ‘b’ may be used uninitialized in this function
+[ 96%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/PhysicalSVD.cpp.o
+[ 98%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/RankCommon.cpp.o
+[100%] Building CXX object linear_algebra/CMakeFiles/linear_algebra.dir/CDFs.cpp.o
+Linking CXX shared library ../plugins/liblinear_algebra.so
+[100%] Built target linear_algebra
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /opt/Continuous/lib/scidb/plugins/liblinear_algebra.so
+-- Installing: /opt/Continuous/lib/scidb/plugins/libp4_system.so
+-- Installing: /opt/Continuous/bin/kolmogorov_smirnov.sh
+ Size of output: 16K
+Command exited with the value: 0
+MakeCommand:/usr/bin/make -j3 install
+   0 Compiler errors
+   46 Compiler warnings
+SetCTestConfiguration:BuildDirectory:/build/p4-trunk/p4trunk
+SetCTestConfiguration:SourceDirectory:/build/p4-trunk/p4trunk
+Test project /build/p4-trunk/p4trunk
+Constructing a list of tests
+Checking test dependency graph...
+test 1
+    Start 1: continuousTest
+
+1: Test command: /bin/bash "/build/p4-trunk/p4trunk/test/runharness.sh" "linear_algebra_tests"
+1: Test timeout computed to be: 600
+1: Initializing and Starting SciDB...
+1: /opt/Continuous/bin/scidb.py
+1: Traceback (most recent call last):
+1:   File "/opt/Continuous/bin/scidb.py", line 440, in <module>
+1:     os.chdir(getInstanceDataPath(masterNode,0))
+1: OSError: [Errno 2] No such file or directory: '/home/scidb/p4nightly//000/0'
+1: NOTICE:  drop cascades to 6 other objects
+1: DETAIL:  drop cascades to constraint array_version_array_id_fkey on table array_version
+1: drop cascades to constraint array_version_version_array_id_fkey on table array_version
+1: drop cascades to constraint array_version_lock_array_id_fkey on table array_version_lock
+1: drop cascades to constraint array_partition_array_id_fkey on table array_partition
+1: drop cascades to constraint array_attribute_array_id_fkey on table array_attribute
+1: drop cascades to constraint array_dimension_array_id_fkey on table array_dimension
+1: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "array_pkey" for table "array"
+1: NOTICE:  CREATE TABLE / UNIQUE will create implicit index "array_name_key" for table "array"
+1: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "array_version_pkey" for table "array_version"
+1: NOTICE:  CREATE TABLE / UNIQUE will create implicit index "array_version_array_id_key" for table "array_version"
+1: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "array_version_lock_pkey" for table "array_version_lock"
+1: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "node_pkey" for table "node"
+1: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "array_partition_pkey" for table "array_partition"
+1: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "array_attribute_pkey" for table "array_attribute"
+1: NOTICE:  CREATE TABLE / UNIQUE will create implicit index "array_attribute_array_id_key" for table "array_attribute"
+1: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "array_dimension_pkey" for table "array_dimension"
+1: NOTICE:  CREATE TABLE / UNIQUE will create implicit index "array_dimension_array_id_key" for table "array_dimension"
+1: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "libraries_pkey" for table "libraries"
+1: NOTICE:  CREATE TABLE / UNIQUE will create implicit index "libraries_name_key" for table "libraries"
+1: WARNING:  there is no transaction in progress
+1: Cleaning up old logs and storage files.
+1: init(node 0 (127.0.0.1) instance 0)
+1: Reinitializing and registering local scidb instance/storage.
+1: 
+1: sudo privileges are required to configure the postgres database.
+1: start(node 0 (127.0.0.1) instance 0)
+1: Starting SciDB server.
+1: {'install_root': '/opt/Continuous', 'db_name': 'p4', 'pluginsdir': '/opt/Continuous/lib/scidb/plugins', 'logconf': '/opt/Continuous/share/scidb/log4cxx.properties', 'interface': 'eth0', 'db_passwd': 'p4', 'db_user': 'p4', 'node-0': '127.0.0.1,0', 'base-port': '4444', 'base-path': '/home/scidb/p4nightly/', 'metadata': '/opt/Continuous/share/scidb/meta.sql'}
+1: Loading plugins...
+1: Query was executed successfully
+1: Query was executed successfully
+1: Waiting 10 seconds...
+1: [1][Sat Oct  8 02:21:18 2011]: t.la_cdf ______________________________________________________________ Executing
+1: [1][Sat Oct  8 02:21:18 2011]: t.la_cdf .............................................................. PASS
+1: [2][Sat Oct  8 02:21:18 2011]: t.la_covar ______________________________________________________________ Executing
+1: [2][Sat Oct  8 02:21:19 2011]: t.la_covar .............................................................. PASS
+1: [3][Sat Oct  8 02:21:19 2011]: t.la_euclidean ______________________________________________________________ Executing
+1: [3][Sat Oct  8 02:21:20 2011]: t.la_euclidean .............................................................. PASS
+1: [4][Sat Oct  8 02:21:20 2011]: t.la_kendall ______________________________________________________________ Executing
+1: [4][Sat Oct  8 02:21:20 2011]: t.la_kendall .............................................................. PASS
+1: [5][Sat Oct  8 02:21:20 2011]: t.la_linregr ______________________________________________________________ Executing
+1: [5][Sat Oct  8 02:21:22 2011]: t.la_linregr .............................................................. PASS
+1: [6][Sat Oct  8 02:21:22 2011]: t.la_logistregr ______________________________________________________________ Executing
+1: [6][Sat Oct  8 02:21:22 2011]: t.la_logistregr .............................................................. PASS
+1: [7][Sat Oct  8 02:21:22 2011]: t.la_manhattan ______________________________________________________________ Executing
+1: [7][Sat Oct  8 02:21:23 2011]: t.la_manhattan .............................................................. PASS
+1: [8][Sat Oct  8 02:21:23 2011]: t.la_mixed ______________________________________________________________ Executing
+1: [8][Sat Oct  8 02:21:23 2011]: t.la_mixed .............................................................. PASS
+1: [9][Sat Oct  8 02:21:23 2011]: t.la_pearson ______________________________________________________________ Executing
+1: [9][Sat Oct  8 02:21:24 2011]: t.la_pearson .............................................................. PASS
+1: [10][Sat Oct  8 02:21:24 2011]: t.la_quantile ______________________________________________________________ Executing
+1: [10][Sat Oct  8 02:21:24 2011]: t.la_quantile .............................................................. PASS
+1: [11][Sat Oct  8 02:21:24 2011]: t.la_solve2 ______________________________________________________________ Executing
+1: [11][Sat Oct  8 02:21:25 2011]: t.la_solve2 .............................................................. PASS
+1: [12][Sat Oct  8 02:21:25 2011]: t.la_spearman ______________________________________________________________ Executing
+1: [12][Sat Oct  8 02:21:26 2011]: t.la_spearman .............................................................. PASS
+1: [13][Sat Oct  8 02:21:26 2011]: t.la_svd ______________________________________________________________ Executing
+1: [13][Sat Oct  8 02:21:26 2011]: t.la_svd .............................................................. PASS
+1: testcases_total = 13
+1: testcases_passed = 13
+1: testcases_failed = 0
+1: testcases_skipped = 0
+1: testsuites_skipped = 0
+1: Stopping SciDB...
+1: stop(node 0 (127.0.0.1) instance 0)
+1: Traceback (most recent call last):
+1:   File "/opt/Continuous/bin/scidb.py", line 441, in <module>
+1:     stopAll()
+1:   File "/opt/Continuous/bin/scidb.py", line 398, in stopAll
+1:     stop(n,0)
+1:   File "/opt/Continuous/bin/scidb.py", line 407, in stop
+1:     executeIt(cmdList, node, instance, useConnstr=False, useSSH4Local=True, nocwd=True)
+1:   File "/opt/Continuous/bin/scidb.py", line 162, in executeIt
+1:     sshc.connect(node[1],port=sshPort,key_filename=keyFilenameList,timeout=120)
+1:   File "/usr/lib/pymodules/python2.6/paramiko/client.py", line 327, in connect
+1:     self._auth(username, password, pkey, key_filenames, allow_agent, look_for_keys)
+1:   File "/usr/lib/pymodules/python2.6/paramiko/client.py", line 482, in _auth
+1:     raise SSHException('No authentication methods available')
+1: paramiko.SSHException: No authentication methods available
+1/1 Test #1: continuousTest ...................***Failed   38.38 sec
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =  38.38 sec
+
+The following tests FAILED:
+	  1 - continuousTest (Failed)
+SetCTestConfigurationFromCMakeVariable:CoverageCommand:CTEST_COVERAGE_COMMANDSetCTestConfiguration:CoverageCommand:/usr/bin/gcov
+ Add coverage exclude regular expressions.
+SetCTestConfiguration:BuildDirectory:/build/p4-trunk/p4trunk
+SetCTestConfiguration:SourceDirectory:/build/p4-trunk/p4trunk
+ target directory list [/build/p4-trunk/p4trunk/CMakeFiles/TargetDirectories.txt]
+Performing coverage
+ COVFILE environment variable not found, not running  bullseye
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/Continuous.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ContinuousBuild.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ContinuousConfigure.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ContinuousCoverage.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ContinuousMemCheck.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ContinuousStart.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ContinuousSubmit.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ContinuousTest.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ContinuousUpdate.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/Experimental.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ExperimentalBuild.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ExperimentalConfigure.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ExperimentalCoverage.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ExperimentalMemCheck.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ExperimentalStart.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ExperimentalSubmit.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ExperimentalTest.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/ExperimentalUpdate.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/Nightly.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/NightlyBuild.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/NightlyConfigure.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/NightlyCoverage.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/NightlyMemCheck.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/NightlyMemoryCheck.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/NightlyStart.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/NightlySubmit.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/NightlyTest.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/NightlyUpdate.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/src_package.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/CMakeFiles/uninstall.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/clientApiR/CMakeFiles/scidbrapi.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/linear_algebra/CMakeFiles/linear_algebra.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/proto/CMakeFiles/p4_msg_lib.dir
+   globbing for coverage in: /build/p4-trunk/p4trunk/system/CMakeFiles/p4_system.dir
+ Cannot find any GCov coverage files.
+ Cannot find any Python Trace.py coverage files.
+ Cannot find any coverage files. Ignoring Coverage request.
+SetCTestConfiguration:DropMethod:http
+SetCTestConfiguration:DropSite:build.paradigm4.com
+SetCTestConfiguration:DropLocation:/CDash/submit.php?project=SciDB_p4
+SetCTestConfiguration:IsCDash:TRUE
+	Add file: /tmp/p4_ContinuousBuild.log_02-18-19_08.10.2011
+SetCTestConfiguration:BuildDirectory:/build/p4-trunk/p4trunk
+SetCTestConfiguration:SourceDirectory:/build/p4-trunk/p4trunk
+Submit files (using http)
+   Using HTTP submit method
+   Drop site:http://build.paradigm4.com/CDash/submit.php?project=SciDB_p4
+   Upload file: /build/p4-trunk/p4trunk/Testing/20111008-0218/Build.xml to http://build.paradigm4.com/CDash/submit.php?project=SciDB_p4&FileName=domU-12-31-39-14-62-60___paradigm4___20111008-0218-Continuous___XML___Build.xml&MD5=a80b9369f0d5c499de46115018bf72b4 Size: 28105
+   Error when uploading file: /build/p4-trunk/p4trunk/Testing/20111008-0218/Build.xml
+   Error message was: Couldn't resolve host 'build.paradigm4.com'
+   Problems when submitting via HTTP

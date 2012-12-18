@@ -1,0 +1,94 @@
+2011-10-08 02:21:26,408 INFO EXECUTOR[140160741271296] - logger SYSTEM ENABLED
+2011-10-08 02:21:26,408 INFO EXECUTOR[140160741271296] - Parsing test case file : /build/p4-trunk/p4trunk/test/linear_algebra_tests/testcases/t/la_svd.test
+2011-10-08 02:21:26,408 INFO EXECUTOR[140160741271296] - found SETUP section.
+2011-10-08 02:21:26,408 INFO EXECUTOR[140160741271296] - found TEST section.
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - Arguments for command [--igdata  --afl="list('operators')"] successfully separated.
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - found CLEANUP section.
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - Done Parsing test case file...
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - Printing Parsed Vector : 
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - --setup ||
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |create array p4_svd_10x10 <x:double>[i=0:9,2,0, j=0:9,5,0]|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_svd_test1 <a:double> [x=0:9,2,0, y=0:9,5,0]|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_svd_test2 <a:double> [x=0:7,2,0, y=0:11,4,0]|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_svd_test3 <a:double> [x=0:11,4,0, y=0:7,2,0]|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |create array p4_svd_test4 <x:double>[i=0:7,2,0, j=0:7,2,0]|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_svd_10x10, '../p4test/p4_svd_10x10.txt', 0)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_svd_test1, '../p4test/p4_svd_test1.txt', 0)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_svd_test2, '../p4test/p4_svd_test2.txt', 0)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_svd_test3, '../p4test/p4_svd_test3.txt', 0)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - --test ||
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |repart(svd(p4_svd_test1,'left'), p4_svd_test1)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |repart(svd(p4_svd_test1,'right'), p4_svd_test1)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |svd(p4_svd_test1,'values')|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |repart(svd(p4_svd_test2,'left'), p4_svd_test4)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |repart(svd(p4_svd_test2,'right'), p4_svd_test3)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |svd(p4_svd_test2,'values')|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |repart(svd(p4_svd_test3,'left'), p4_svd_test3)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |repart(svd(p4_svd_test3,'right'), p4_svd_test4)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |svd(p4_svd_test3,'values')|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--igdata |"list('operators')"|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - --cleanup ||
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_svd_10x10)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_svd_test1)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_svd_test2)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_svd_test3)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_svd_test4)|
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - Done Printing Parsed Vector... 
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - Starting executing the test case ...
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - No [preSetup] commands found.
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - Executing [SETUP] section.
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - Executing Command --setup
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,414 INFO EXECUTOR[140160741271296] - Executing query : <create array p4_svd_10x10 <x:double>[i=0:9,2,0, j=0:9,5,0]>
+2011-10-08 02:21:26,432 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,432 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_svd_test1 <a:double> [x=0:9,2,0, y=0:9,5,0]>
+2011-10-08 02:21:26,436 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,436 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_svd_test2 <a:double> [x=0:7,2,0, y=0:11,4,0]>
+2011-10-08 02:21:26,441 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,441 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_svd_test3 <a:double> [x=0:11,4,0, y=0:7,2,0]>
+2011-10-08 02:21:26,445 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,445 INFO EXECUTOR[140160741271296] - Executing query : <create array p4_svd_test4 <x:double>[i=0:7,2,0, j=0:7,2,0]>
+2011-10-08 02:21:26,449 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,449 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_svd_10x10, '../p4test/p4_svd_10x10.txt', 0)>
+2011-10-08 02:21:26,518 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,518 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_svd_test1, '../p4test/p4_svd_test1.txt', 0)>
+2011-10-08 02:21:26,578 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,578 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_svd_test2, '../p4test/p4_svd_test2.txt', 0)>
+2011-10-08 02:21:26,647 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,647 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_svd_test3, '../p4test/p4_svd_test3.txt', 0)>
+2011-10-08 02:21:26,703 INFO EXECUTOR[140160741271296] - Executing [TEST] section.
+2011-10-08 02:21:26,703 INFO EXECUTOR[140160741271296] - Executing Command --test
+2011-10-08 02:21:26,703 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,703 INFO EXECUTOR[140160741271296] - Executing query : <repart(svd(p4_svd_test1,'left'), p4_svd_test1)>
+2011-10-08 02:21:26,724 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,724 INFO EXECUTOR[140160741271296] - Executing query : <repart(svd(p4_svd_test1,'right'), p4_svd_test1)>
+2011-10-08 02:21:26,734 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,734 INFO EXECUTOR[140160741271296] - Executing query : <svd(p4_svd_test1,'values')>
+2011-10-08 02:21:26,741 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,741 INFO EXECUTOR[140160741271296] - Executing query : <repart(svd(p4_svd_test2,'left'), p4_svd_test4)>
+2011-10-08 02:21:26,752 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,752 INFO EXECUTOR[140160741271296] - Executing query : <repart(svd(p4_svd_test2,'right'), p4_svd_test3)>
+2011-10-08 02:21:26,764 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,764 INFO EXECUTOR[140160741271296] - Executing query : <svd(p4_svd_test2,'values')>
+2011-10-08 02:21:26,770 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,770 INFO EXECUTOR[140160741271296] - Executing query : <repart(svd(p4_svd_test3,'left'), p4_svd_test3)>
+2011-10-08 02:21:26,781 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,781 INFO EXECUTOR[140160741271296] - Executing query : <repart(svd(p4_svd_test3,'right'), p4_svd_test4)>
+2011-10-08 02:21:26,792 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,792 INFO EXECUTOR[140160741271296] - Executing query : <svd(p4_svd_test3,'values')>
+2011-10-08 02:21:26,798 INFO EXECUTOR[140160741271296] - Executing Command --igdata
+2011-10-08 02:21:26,798 INFO EXECUTOR[140160741271296] - Executing query : <list('operators')>
+2011-10-08 02:21:26,799 INFO EXECUTOR[140160741271296] - Executing [CLEANUP] section.
+2011-10-08 02:21:26,799 INFO EXECUTOR[140160741271296] - Executing Command --cleanup
+2011-10-08 02:21:26,799 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,799 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_svd_10x10)>
+2011-10-08 02:21:26,812 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,812 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_svd_test1)>
+2011-10-08 02:21:26,824 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,824 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_svd_test2)>
+2011-10-08 02:21:26,845 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,845 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_svd_test3)>
+2011-10-08 02:21:26,854 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:26,854 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_svd_test4)>
+2011-10-08 02:21:26,859 INFO EXECUTOR[140160741271296] - Done executing the test case ...
+2011-10-08 02:21:26,859 INFO EXECUTOR[140160741271296] - EXECUTOR returning SUCCESS to the caller.

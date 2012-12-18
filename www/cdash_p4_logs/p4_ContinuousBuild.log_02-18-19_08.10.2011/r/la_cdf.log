@@ -1,0 +1,156 @@
+2011-10-08 02:21:18,087 INFO EXECUTOR[140160741271296] - logger SYSTEM ENABLED
+2011-10-08 02:21:18,087 INFO EXECUTOR[140160741271296] - Parsing test case file : /build/p4-trunk/p4trunk/test/linear_algebra_tests/testcases/t/la_cdf.test
+2011-10-08 02:21:18,087 INFO EXECUTOR[140160741271296] - found SETUP section.
+2011-10-08 02:21:18,087 INFO EXECUTOR[140160741271296] - found TEST section.
+2011-10-08 02:21:18,087 INFO EXECUTOR[140160741271296] - found CLEANUP section.
+2011-10-08 02:21:18,087 INFO EXECUTOR[140160741271296] - Done Parsing test case file...
+2011-10-08 02:21:18,087 INFO EXECUTOR[140160741271296] - Printing Parsed Vector : 
+2011-10-08 02:21:18,087 INFO EXECUTOR[140160741271296] - --setup ||
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_cdf_test1 <a:double> [x=0:0,1,0, y=0:6,7,0]|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |load(p4_cdf_test1, '../p4test/p4_cdf_test1.txt')|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - --test ||
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ibinomcdf, ibinomcdf(p4_cdf_test1.a,1,0.5)), a_ibinomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_binomcdf, binomcdf(p4_cdf_test1.a,1,0.5)), a_binomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ichi2cdf, ichi2cdf(p4_cdf_test1.a,1)), a_ichi2cdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_chi2cdf, chi2cdf(p4_cdf_test1.a,1)), a_chi2cdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,1)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,2)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(0,p4_cdf_test1.a)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(1,p4_cdf_test1.a)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(2,p4_cdf_test1.a)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(50,p4_cdf_test1.a)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,-1)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,0)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,0.25)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,0.5)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,0.75)), a_igeomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_geomcdf, geomcdf(0, p4_cdf_test1.a)), a_geomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_geomcdf, geomcdf(1, p4_cdf_test1.a)), a_geomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_geomcdf, geomcdf(2, p4_cdf_test1.a)), a_geomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_geomcdf, geomcdf(50, p4_cdf_test1.a)), a_geomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,0,1,0)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,100,10,1)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,100,10,4)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,100,10,5)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,100,10,20)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,0,0,0)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,1,0,0)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,1,0,1)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,0,0,1)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,0,1,1)), a_ihygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,100,10,1)), a_hygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,0,0,0)), a_hygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,1,0,0)), a_hygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,1,0,1)), a_hygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,0,0,1)), a_hygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,0,1,1)), a_hygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,0,1,0)), a_hygecdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_inegbinomcdf, inegbinomcdf(p4_cdf_test1.a,1,0.5)), a_inegbinomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_negbinomcdf, negbinomcdf(p4_cdf_test1.a,1,0.5)), a_negbinomcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_inormcdf, inormcdf(p4_cdf_test1.a,0,1)), a_inormcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_normcdf, normcdf(p4_cdf_test1.a,0,1)), a_normcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_itcdf, itcdf(p4_cdf_test1.a,1)), a_itcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |project(apply(p4_cdf_test1, a_tcdf, tcdf(p4_cdf_test1.a,1)), a_tcdf)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - --cleanup ||
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_cdf_test1)|
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - Done Printing Parsed Vector... 
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - Starting executing the test case ...
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - No [preSetup] commands found.
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - Executing [SETUP] section.
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - Executing Command --setup
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,088 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_cdf_test1 <a:double> [x=0:0,1,0, y=0:6,7,0]>
+2011-10-08 02:21:18,099 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,099 INFO EXECUTOR[140160741271296] - Executing query : <load(p4_cdf_test1, '../p4test/p4_cdf_test1.txt')>
+2011-10-08 02:21:18,162 INFO EXECUTOR[140160741271296] - Executing [TEST] section.
+2011-10-08 02:21:18,162 INFO EXECUTOR[140160741271296] - Executing Command --test
+2011-10-08 02:21:18,162 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,162 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ibinomcdf, ibinomcdf(p4_cdf_test1.a,1,0.5)), a_ibinomcdf)>
+2011-10-08 02:21:18,170 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,170 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_binomcdf, binomcdf(p4_cdf_test1.a,1,0.5)), a_binomcdf)>
+2011-10-08 02:21:18,196 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,196 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ichi2cdf, ichi2cdf(p4_cdf_test1.a,1)), a_ichi2cdf)>
+2011-10-08 02:21:18,203 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,203 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_chi2cdf, chi2cdf(p4_cdf_test1.a,1)), a_chi2cdf)>
+2011-10-08 02:21:18,211 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,211 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,1)), a_igeomcdf)>
+2011-10-08 02:21:18,219 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,219 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,2)), a_igeomcdf)>
+2011-10-08 02:21:18,228 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,228 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(0,p4_cdf_test1.a)), a_igeomcdf)>
+2011-10-08 02:21:18,236 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,236 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(1,p4_cdf_test1.a)), a_igeomcdf)>
+2011-10-08 02:21:18,244 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,244 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(2,p4_cdf_test1.a)), a_igeomcdf)>
+2011-10-08 02:21:18,252 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,252 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(50,p4_cdf_test1.a)), a_igeomcdf)>
+2011-10-08 02:21:18,281 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,281 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,-1)), a_igeomcdf)>
+2011-10-08 02:21:18,289 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,289 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,0)), a_igeomcdf)>
+2011-10-08 02:21:18,307 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,307 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,0.25)), a_igeomcdf)>
+2011-10-08 02:21:18,316 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,316 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,0.5)), a_igeomcdf)>
+2011-10-08 02:21:18,324 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,324 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_igeomcdf, igeomcdf(p4_cdf_test1.a,0.75)), a_igeomcdf)>
+2011-10-08 02:21:18,345 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,345 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_geomcdf, geomcdf(0, p4_cdf_test1.a)), a_geomcdf)>
+2011-10-08 02:21:18,352 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,352 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_geomcdf, geomcdf(1, p4_cdf_test1.a)), a_geomcdf)>
+2011-10-08 02:21:18,361 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,361 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_geomcdf, geomcdf(2, p4_cdf_test1.a)), a_geomcdf)>
+2011-10-08 02:21:18,369 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,369 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_geomcdf, geomcdf(50, p4_cdf_test1.a)), a_geomcdf)>
+2011-10-08 02:21:18,377 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,377 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,0,1,0)), a_ihygecdf)>
+2011-10-08 02:21:18,385 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,385 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,100,10,1)), a_ihygecdf)>
+2011-10-08 02:21:18,393 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,394 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,100,10,4)), a_ihygecdf)>
+2011-10-08 02:21:18,402 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,402 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,100,10,5)), a_ihygecdf)>
+2011-10-08 02:21:18,410 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,410 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,100,10,20)), a_ihygecdf)>
+2011-10-08 02:21:18,417 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,417 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,0,0,0)), a_ihygecdf)>
+2011-10-08 02:21:18,424 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,424 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,1,0,0)), a_ihygecdf)>
+2011-10-08 02:21:18,431 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,431 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,1,0,1)), a_ihygecdf)>
+2011-10-08 02:21:18,438 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,438 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,0,0,1)), a_ihygecdf)>
+2011-10-08 02:21:18,445 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,445 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_ihygecdf, ihygecdf(p4_cdf_test1.a,0,1,1)), a_ihygecdf)>
+2011-10-08 02:21:18,453 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,453 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,100,10,1)), a_hygecdf)>
+2011-10-08 02:21:18,461 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,461 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,0,0,0)), a_hygecdf)>
+2011-10-08 02:21:18,469 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,469 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,1,0,0)), a_hygecdf)>
+2011-10-08 02:21:18,486 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,486 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,1,0,1)), a_hygecdf)>
+2011-10-08 02:21:18,493 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,493 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,0,0,1)), a_hygecdf)>
+2011-10-08 02:21:18,500 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,500 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,0,1,1)), a_hygecdf)>
+2011-10-08 02:21:18,508 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,508 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_hygecdf, hygecdf(p4_cdf_test1.a,0,1,0)), a_hygecdf)>
+2011-10-08 02:21:18,516 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,516 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_inegbinomcdf, inegbinomcdf(p4_cdf_test1.a,1,0.5)), a_inegbinomcdf)>
+2011-10-08 02:21:18,525 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,525 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_negbinomcdf, negbinomcdf(p4_cdf_test1.a,1,0.5)), a_negbinomcdf)>
+2011-10-08 02:21:18,533 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,533 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_inormcdf, inormcdf(p4_cdf_test1.a,0,1)), a_inormcdf)>
+2011-10-08 02:21:18,542 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,542 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_normcdf, normcdf(p4_cdf_test1.a,0,1)), a_normcdf)>
+2011-10-08 02:21:18,550 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,550 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_itcdf, itcdf(p4_cdf_test1.a,1)), a_itcdf)>
+2011-10-08 02:21:18,568 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,568 INFO EXECUTOR[140160741271296] - Executing query : <project(apply(p4_cdf_test1, a_tcdf, tcdf(p4_cdf_test1.a,1)), a_tcdf)>
+2011-10-08 02:21:18,576 INFO EXECUTOR[140160741271296] - Executing [CLEANUP] section.
+2011-10-08 02:21:18,576 INFO EXECUTOR[140160741271296] - Executing Command --cleanup
+2011-10-08 02:21:18,576 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:18,576 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_cdf_test1)>
+2011-10-08 02:21:18,604 INFO EXECUTOR[140160741271296] - Done executing the test case ...
+2011-10-08 02:21:18,604 INFO EXECUTOR[140160741271296] - EXECUTOR returning SUCCESS to the caller.

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/CDash/!svn/ver/2306/Release-1-6-4/local
+END
+footer.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CDash/!svn/ver/2306/Release-1-6-4/local/footer.xsl
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CDash/!svn/ver/2306/Release-1-6-4/local/README.txt
+END
+header.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CDash/!svn/ver/2306/Release-1-6-4/local/header.xsl
+END
+headeradminproject.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/CDash/!svn/ver/2306/Release-1-6-4/local/headeradminproject.xsl
+END
+headerback.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CDash/!svn/ver/2306/Release-1-6-4/local/headerback.xsl
+END
+headscripts.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CDash/!svn/ver/2306/Release-1-6-4/local/headscripts.xsl
+END

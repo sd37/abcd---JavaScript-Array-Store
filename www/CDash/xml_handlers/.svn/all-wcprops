@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers
+END
+coverage_log_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/coverage_log_handler.php
+END
+testing_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/testing_handler.php
+END
+build_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/build_handler.php
+END
+configure_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/configure_handler.php
+END
+update_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/update_handler.php
+END
+abstract_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/abstract_handler.php
+END
+note_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/note_handler.php
+END
+project_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/project_handler.php
+END
+dynamic_analysis_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/dynamic_analysis_handler.php
+END
+stack.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/stack.php
+END
+coverage_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/coverage_handler.php
+END
+sax_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/CDash/!svn/ver/2306/Release-1-6-4/xml_handlers/sax_handler.php
+END

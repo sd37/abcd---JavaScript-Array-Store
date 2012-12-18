@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/pgsql
+END
+cdash-upgrade-1.0-1.2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/pgsql/cdash-upgrade-1.0-1.2.sql
+END
+cdash.ext.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/pgsql/cdash.ext.sql
+END
+cdash.sql
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/pgsql/cdash.sql
+END
+cdash-upgrade-1.2-1.4.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/pgsql/cdash-upgrade-1.2-1.4.sql
+END
+cdash-upgrade-0.8-1.0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/pgsql/cdash-upgrade-0.8-1.0.sql
+END
+cdash-upgrade-0-0.8.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/pgsql/cdash-upgrade-0-0.8.sql
+END
+cdash-upgrade-1.4-1.6.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/CDash/!svn/ver/2306/Release-1-6-4/sql/pgsql/cdash-upgrade-1.4-1.6.sql
+END

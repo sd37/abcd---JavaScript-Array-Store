@@ -1,0 +1,58 @@
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - logger SYSTEM ENABLED
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - Parsing test case file : /build/scidb-trunk/trunk/tests/harness/testcases/t/data_model/sum/sum_20.test
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - found SETUP section.
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - found TEST section.
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - found CLEANUP section.
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - Done Parsing test case file...
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - Printing Parsed Vector : 
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - --setup ||
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--start-query-logging ||
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--start-igdata ||
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--aql |create immutable array T < x: double > [ i=1:3,100,0, j=1:3,100,0 ]|
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--aql |create immutable array E < x: double > [ j=1:3,100,0 ]|
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--aql |create immutable array R < x: double > [ j=1:3,100,0 ]|
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--afl |store(build(T,i+j),T)|
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--afl |store(build(E,j*3 + 3*(3+1)/2),E)|
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--afl |store(repart(sum(T,x,j),R),R)|
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--stop-igdata ||
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - --test ||
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - 	--aql |SELECT count(*) FROM R , E WHERE abs((R.x-E.x)/iif(E.x=0,1,E.x)) > 1e-07|
+2011-10-07 21:50:18,360 INFO EXECUTOR[140617352677120] - --cleanup ||
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - 	--afl |remove(T)|
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - 	--afl |remove(E)|
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - 	--afl |remove(R)|
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - 	--stop-query-logging ||
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Done Printing Parsed Vector... 
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Starting executing the test case ...
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - No [preSetup] commands found.
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Executing [SETUP] section.
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Executing Command --setup
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Executing Command --start-query-logging
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Starting query logging...
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Executing Command --start-igdata
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Starting Ignoring the data output by query ...
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Executing Command --aql
+2011-10-07 21:50:18,361 INFO EXECUTOR[140617352677120] - Executing query : <create immutable array T < x: double > [ i=1:3,100,0, j=1:3,100,0 ]>
+2011-10-07 21:50:18,365 INFO EXECUTOR[140617352677120] - Executing Command --aql
+2011-10-07 21:50:18,365 INFO EXECUTOR[140617352677120] - Executing query : <create immutable array E < x: double > [ j=1:3,100,0 ]>
+2011-10-07 21:50:18,370 INFO EXECUTOR[140617352677120] - Executing Command --aql
+2011-10-07 21:50:18,370 INFO EXECUTOR[140617352677120] - Executing query : <create immutable array R < x: double > [ j=1:3,100,0 ]>
+2011-10-07 21:50:18,374 INFO EXECUTOR[140617352677120] - Executing Command --afl
+2011-10-07 21:50:18,375 INFO EXECUTOR[140617352677120] - Executing query : <store(build(T,i+j),T)>
+2011-10-07 21:50:18,395 INFO EXECUTOR[140617352677120] - Executing Command --afl
+2011-10-07 21:50:18,395 INFO EXECUTOR[140617352677120] - Executing query : <store(build(E,j*3 + 3*(3+1)/2),E)>
+2011-10-07 21:50:18,414 INFO EXECUTOR[140617352677120] - Executing Command --afl
+2011-10-07 21:50:18,414 INFO EXECUTOR[140617352677120] - Executing query : <store(repart(sum(T,x,j),R),R)>
+2011-10-07 21:50:18,431 INFO EXECUTOR[140617352677120] - Exception CAUGHT for SCIDB query...:Arrays are not conformant: srcAttrs[i].getType() == dstAttrs[i].getType() && (dstAttrs[i].isNullable() || !srcAttrs[i].isNullable())
+2011-10-07 21:50:18,431 ERROR EXECUTOR[140617352677120] - ExecutorError: /build/scidb-trunk/trunk/tests/harness/src/defaultexecutor.cpp:317:runSciDBquery(): SciDB query execution failed
+2011-10-07 21:50:18,431 WARN EXECUTOR[140617352677120] - Executing [CLEANUP] section.
+2011-10-07 21:50:18,431 INFO EXECUTOR[140617352677120] - Executing Command --cleanup
+2011-10-07 21:50:18,431 INFO EXECUTOR[140617352677120] - Executing Command --afl
+2011-10-07 21:50:18,431 INFO EXECUTOR[140617352677120] - Executing query : <remove(T)>
+2011-10-07 21:50:18,439 INFO EXECUTOR[140617352677120] - Executing Command --afl
+2011-10-07 21:50:18,439 INFO EXECUTOR[140617352677120] - Executing query : <remove(E)>
+2011-10-07 21:50:18,446 INFO EXECUTOR[140617352677120] - Executing Command --afl
+2011-10-07 21:50:18,446 INFO EXECUTOR[140617352677120] - Executing query : <remove(R)>
+2011-10-07 21:50:18,451 INFO EXECUTOR[140617352677120] - Executing Command --stop-query-logging
+2011-10-07 21:50:18,451 INFO EXECUTOR[140617352677120] - Stoping query logging...
+2011-10-07 21:50:18,451 INFO EXECUTOR[140617352677120] - EXECUTOR returning FAILURE to the caller.

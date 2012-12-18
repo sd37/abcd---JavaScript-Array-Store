@@ -1,0 +1,269 @@
+<?php
+/*=========================================================================
+
+  Program:   CDash - Cross-Platform Dashboard System
+  Module:    $Id: test.php 2090 2009-12-21 16:28:42Z jjomier $
+  Language:  PHP
+  Date:      $Date: 2009-12-21 16:28:42 +0000 (Mon, 21 Dec 2009) $
+  Version:   $Revision: 2090 $
+
+  Copyright (c) 2002 Kitware, Inc.  All rights reserved.
+  See Copyright.txt or http://www.cmake.org/HTML/Copyright.html for details.
+
+     This software is distributed WITHOUT ANY WARRANTY; without even
+     the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+     PURPOSE.  See the above copyright notices for more information.
+
+=========================================================================*/
+// It is assumed that appropriate headers should be included before including this file
+include_once('models/testimage.php');
+include_once('models/testmeasurement.php');
+include_once('models/buildtestdiff.php');
+include_once('models/buildtest.php');
+include_once('models/label.php');
+include_once('models/testimage.php');
+include_once('models/image.php');
+
+/** Test */
+class Test
+{
+  var $Id;
+  var $Crc32;
+  var $ProjectId;
+  var $Name;
+  var $Path;
+  var $Command;
+  var $Details;
+  var $Output;
+  var $CompressedOutput;
+  
+  var $Images;
+  var $Labels;
+  var $Measurements;
+  
+  function __construct()
+    {
+    $this->Images = array();
+    $this->Labels = array();
+    $this->Measurements = array();
+    $this->CompressedOutput = false;
+    }
+
+  function AddMeasurement($measurement)
+    {
+    $measurement->TestId = $this->Id;
+    $this->Measurements[] = $measurement;
+
+    if ($measurement->Name == 'Label')
+      {
+      $label = new Label();
+      $label->SetText($measurement->Value);
+      $this->AddLabel($label);
+      }
+    }
+
+  function AddImage($image)
+    {
+    $image->TestId = $this->Id;
+    $this->Images[] = $image;
+    }
+
+  function AddLabel($label)
+    {
+    $label->TestId = $this->Id;
+    $this->Labels[] = $label;
+    }
+
+
+  function SetValue($tag,$value)
+    {
+    switch($tag)
+      {
+      case "CRC32": $this->Crc32 = $value;break;
+      case "PROJECTID": $this->ProjectId = $value;break;
+      case "NAME": $this->Name = $value;break;
+      case "PATH": $this->Path = $value;break;
+      case "COMMAND": $this->Command = $value;break;
+      case "DETAILS": $this->Details = $value;break;
+      case "OUTPUT": $this->Output = $value;break;
+      }
+    }
+
+  /** Get the CRC32 */
+  function GetCrc32()
+    {
+    if(strlen($this->Crc32)>0)
+      {
+      return $this->Crc32;
+      }
+    
+    $command = pdo_real_escape_string($this->Command);
+    $output = pdo_real_escape_string($this->Output);
+    $name = pdo_real_escape_string($this->Name);  
+    $path = pdo_real_escape_string($this->Path);     
+    $details = pdo_real_escape_string($this->Details);
+    
+    // CRC32 is computed with the measurements name and type and value
+    $buffer = $name.$path.$command.$output.$details; 
+    
+    foreach($this->Measurements as $measurement)
+      {
+      $buffer .= $measurement->Type.$measurement->Name.$measurement->Value;
+      }
+    $this->Crc32 = crc32($buffer);
+    return $this->Crc32;
+    }
+
+
+  function InsertLabelAssociations($buildid)
+    {
+    if($this->Id && $buildid)
+      {
+      foreach($this->Labels as $label)
+        {
+        $label->TestId = $this->Id;
+        $label->TestBuildId = $buildid;
+        $label->Insert();
+        }
+      }
+    else
+      {
+      add_log('No Test::Id or buildid - cannot call $label->Insert...',
+              'Test::InsertLabelAssociations',LOG_ERR);
+      }
+    }
+    
+  /** Return if exists */
+  function Exists()
+    {
+    $crc32 = $this->GetCrc32();
+    $query = pdo_query("SELECT id FROM test WHERE projectid=".qnum($this->ProjectId)." AND crc32='".$crc32."'");
+    if(pdo_num_rows($query)>0)
+      {
+      $query_array = pdo_fetch_array($query);
+      $this->Id = $query_array['id'];
+      return true;
+      }
+    return false;
+    }
+
+  // Save in the database
+  function Insert()
+    {
+    if($this->Exists())
+      {
+      return true;
+      }
+          
+    include("cdash/config.php");
+    $command = pdo_real_escape_string($this->Command);
+
+    $name = pdo_real_escape_string($this->Name);
+    $path = pdo_real_escape_string($this->Path);
+    $details = pdo_real_escape_string($this->Details);
+
+    $id = "";
+    $idvalue = "";
+    if($this->Id)
+      {
+      $id = "id,";
+      $idvalue = "'".$this->Id."',";
+      }
+
+    if($this->CompressedOutput)
+      {
+      if($CDASH_DB_TYPE == "pgsql")
+        { 
+        $output = pg_escape_bytea($this->Output);
+        }
+      else
+        {  
+        $output = base64_decode($this->Output);
+        }
+      }
+    else if($CDASH_USE_COMPRESSION)
+      { 
+      $output = gzcompress($this->Output);
+      if($output === false)
+        {
+        $output = $this->Output;
+        }
+      else
+        {
+        if($CDASH_DB_TYPE == "pgsql")
+          { 
+          if(strlen($this->Output)<2000) // compression doesn't help for small chunk
+            {
+            $output = $this->Output; 
+            } 
+          $output = pg_escape_bytea(base64_encode($output)); // hopefully does the escaping correctly   
+          }
+        }  
+      }
+    else
+      {
+      $output = $this->Output;
+      }
+    
+    $output = pdo_real_escape_string($output);  
+    $query = "INSERT INTO test (".$id."projectid,crc32,name,path,command,details,output)
+              VALUES (".$idvalue."'$this->ProjectId','$this->Crc32','$name','$path','$command','$details','$output')";                     
+
+    if(!pdo_query($query))
+      {
+      add_last_sql_error("Test Insert");
+      return false;
+      }  
+
+    $this->Id = pdo_insert_id("test");
+
+    // Add the measurements
+    foreach($this->Measurements as $measurement)
+      {
+      $measurement->TestId = $this->Id;
+      $measurement->Insert();
+      }
+
+    // Add the images
+    foreach($this->Images as $image)
+      {
+      // Decode the data
+      $imgStr = base64_decode($image->Data);
+       $img = imagecreatefromstring($imgStr);
+      ob_start();
+      switch($image->Extension)
+        {
+        case "image/jpg":
+          imagejpeg($img);
+          break;
+        case "image/jpeg":
+          imagejpeg($img);
+          break;
+        case "image/gif":
+          imagegif($img);
+          break;
+        case "image/png":
+          imagepng($img);
+          break;
+        default:
+          echo "Unknown image type: $type";
+          return;
+        }
+      $imageVariable = addslashes(ob_get_contents());
+      ob_end_clean();
+
+      $image->Data = $imageVariable;
+      $image->Checksum = crc32($imageVariable);
+      $image->Save();
+            
+      $testImage = new TestImage();
+      $testImage->Id = $image->Id;
+      $testImage->TestId = $this->Id;
+      $testImage->Role =  $image->Name;
+      $testImage->Insert();
+      }
+
+    return true;
+    }  // end Insert 
+}
+?>

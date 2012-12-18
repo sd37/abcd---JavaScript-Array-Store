@@ -1,0 +1,187 @@
+<html>
+<head>
+  <title>Datavore Scatter Plot Matrix Demo</title>
+  <script type="text/javascript" src="http://vis.stanford.edu/projects/datavore/lib/d3.v2.min.js"></script>
+  <script type="text/javascript" src="http://vis.stanford.edu/projects/datavore/lib/dv.js"></script>
+  <script type="text/javascript" src="http://vis.stanford.edu/projects/datavore/splom/dv.profile.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js">
+</script>
+  <style type="text/css">
+a {
+  color: black;
+}
+a:hover {
+  color: red;
+}
+svg {
+  border: 1px solid #ccc;
+  padding: 0px;
+  margin: 5px;
+}
+rect, rect.base {
+  fill: steelblue;
+}
+rect.brush {
+  fill: orange;
+}
+.left {
+  width: 315;
+  float: left;
+}
+  </style>
+</head>
+<body>
+<strong>Interactive Binned Scatterplot Matrix</strong>
+&nbsp;&nbsp;
+Dimensions: <select id="dims" onchange="update();">
+ <option value="3">3</option>
+ <option value="4">4</option>
+ <option value="5" selected>5</option>
+</select>
+<select id="bins" onchange="update();" style="visibility:hidden;">
+ <option value="10">10</option>
+ <option value="20" selected>20</option>
+ <option value="30">30</option>
+</select>
+ <select id="rows" onchange="update();" style="visibility:hidden;">
+ <option value="10000">10k</option>
+ <option value="100000" selected>100k</option>
+ <option value="1000000">1M</option>
+</select>
+<div>
+  <span id="d00"></span>
+  <span id="d01"></span>
+  <span id="d02"></span>
+  <span id="d03"></span>
+  <span id="d04"></span><br/>
+  <span id="d10"></span>
+  <span id="d11"></span>
+  <span id="d12"></span>
+  <span id="d13"></span>
+  <span id="d14"></span><br/>
+  <span id="d20"></span>
+  <span id="d21"></span>
+  <span id="d22"></span>
+  <span id="d23"></span>
+  <span id="d24"></span><br/>
+  <span id="d30"></span>
+  <span id="d31"></span>
+  <span id="d32"></span>
+  <span id="d33"></span>
+  <span id="d34"></span><br/>
+  <span id="d40"></span>
+  <span id="d41"></span>
+  <span id="d42"></span>
+  <span id="d43"></span>
+  <span id="d44"></span><br/>
+</div>
+<small>Credit to <a href="http://vis.stanford.edu/projects/datavore/">Stanford Vis Group</a> and <a href="http://www.scidb.org/">SciDB</a></small>
+<script type="text/javascript">
+    var data, sz = 150;
+
+    function update() {
+        var dims = d3.select("#dims").property("value");
+        var bins = d3.select("#bins").property("value");
+        var rows = d3.select("#rows").property("value");
+        run({
+            N: rows,
+            bins: bins,
+            dim: dims
+        });
+    }
+
+    function datagen(opt) {
+        if (data && data.length == opt.dim && data[0].length == opt.N) {
+            return data;
+        }
+
+        var idx = d3.range(opt.N);
+        var vals = idx.map(dv.rand.normal(10, 10))
+        var stats = {};
+        stats["a0"] = vals;
+        if (opt.dim > 1) stats["a1"] = vals.map(function (d) {
+            return dv.rand.normal(10, 10)()
+        });
+        if (opt.dim > 2) stats["a2"] = vals.map(function (d) {
+            return dv.rand.normal(d, 10)()
+        });
+        if (opt.dim > 3) stats["a3"] = vals.map(function (d) {
+            return Math.log(Math.abs(d) + 1) + dv.rand.uniform(3)()
+        });
+        if (opt.dim > 4) stats["a4"] = vals.map(function (d) {
+            return dv.rand.normal(10, 10)()
+        });
+
+        data = [];
+        var counter = 0;
+        for (var name in stats) {
+            data.push({
+                name: "a" + counter,
+                values: stats[name],
+                type: dv.type.numeric
+            });
+            counter++;
+        }
+        data = dv.table(data);
+        return data;
+    }
+
+    function run(opt) {
+        d3.selectAll("div span").html("");
+
+        $.ajax({
+            url: "script.php",
+            type: "GET",
+            data: {
+                dim: parseInt(opt.dim)
+            },
+            cache: false,
+            success: function (response) {
+
+                $.getJSON(response, function (dataobject) {
+
+                    new_data = [];
+                    var counter = 0;
+                    for (var name in dataobject) {
+                        new_data.push({
+                            name: "a" + counter,
+                            values: dataobject[counter],
+                            type: dv.type.numeric
+                        });
+                        counter++;
+                    }
+                    new_data = dv.table(new_data);
+
+                    var data = new_data,
+                        db = dv.profile(data),
+                        op = {
+                            bins: opt.bins,
+                            width: sz,
+                            height: sz
+                        };
+
+                    for (var i = 0; i < data.length; ++i) for (var j = 0; j < data.length; ++j) {
+                        if (i == j) {
+                            db.plot("histogram", ["d", i, j].join(""), [i], op);
+                        } else {
+                            db.plot("scatter", ["d", i, j].join(""), [j, i], op);
+                        }
+                    }
+                    db.init();
+
+
+                });
+
+
+            }
+        });
+
+    }
+    run({
+        N: 100000,
+        bins: 20,
+        dim: 5
+    });
+</script>
+</body>
+</html>

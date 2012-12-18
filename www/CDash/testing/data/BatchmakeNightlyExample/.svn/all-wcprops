@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/BatchmakeNightlyExample
+END
+BatchMake_Nightly_Notes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/BatchmakeNightlyExample/BatchMake_Nightly_Notes.xml
+END
+BatchMake_Nightly_Build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/BatchmakeNightlyExample/BatchMake_Nightly_Build.xml
+END
+BatchMake_Nightly_Test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/BatchmakeNightlyExample/BatchMake_Nightly_Test.xml
+END
+BatchMake_Nightly_Configure.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/BatchmakeNightlyExample/BatchMake_Nightly_Configure.xml
+END
+BatchMake_Nightly_Update.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/data/BatchmakeNightlyExample/BatchMake_Nightly_Update.xml
+END

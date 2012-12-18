@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing
+END
+alltests.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/alltests.php
+END
+test_pubproject.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/test_pubproject.php
+END
+test_subproject.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/test_subproject.php
+END
+test_projectwebpage.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/test_projectwebpage.php
+END
+test_projectindb.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/test_projectindb.php
+END
+config.test.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/config.test.php
+END
+test_compressedtest.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/test_compressedtest.php
+END
+test_email.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/test_email.php
+END
+test_login.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/test_login.php
+END
+test_testenv.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CDash/!svn/ver/2306/Release-1-6-4/testing/test_testenv.php
+END

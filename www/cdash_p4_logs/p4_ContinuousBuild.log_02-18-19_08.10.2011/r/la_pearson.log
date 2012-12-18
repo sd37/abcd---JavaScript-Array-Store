@@ -1,0 +1,126 @@
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - logger SYSTEM ENABLED
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - Parsing test case file : /build/p4-trunk/p4trunk/test/linear_algebra_tests/testcases/t/la_pearson.test
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - found SETUP section.
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - found TEST section.
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - found CLEANUP section.
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - Done Parsing test case file...
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - Printing Parsed Vector : 
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - --setup ||
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_pearson_pairwise_complete_obs_test1 <a:double> [x=0:9,5,0, y=0:5,2,0]|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_pearson_test1 <a:double> [x=0:9,5,0, y=0:9,5,0]|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_pearson_test2 <a:double> [x=0:9,10,0, y=0:1,2,0]|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_pearson_test3 <a:double> [x=0:7,8,0, y=0:5,6,0]|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_pearson_test4 <a:double> [x=0:9,2,0, y=0:9,5,0]|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_pearson_test5 <a:double> [x=0:10,1,0, y=0:10,11,0]|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_pearson_test6 <a:double> [x=0:19,5,0, y=0:5,3,0]|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |CREATE ARRAY p4_pearson_test7 <a:double> [x=0:5,2,0, y=0:11,4,0]|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_pearson_pairwise_complete_obs_test1, '../p4test/p4_pearson_pairwise_complete_obs_test1.txt', 0)|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_pearson_test1, '../p4test/p4_pearson_test1.txt', 0)|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_pearson_test2, '../p4test/p4_pearson_test2.txt', 0)|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_pearson_test3, '../p4test/p4_pearson_test3.txt', 0)|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_pearson_test4, '../p4test/p4_pearson_test4.txt', 0)|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_pearson_test5, '../p4test/p4_pearson_test5.txt', 0)|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_pearson_test6, '../p4test/p4_pearson_test6.txt', 0)|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |load( p4_pearson_test7, '../p4test/p4_pearson_test7.txt', 0)|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - --test ||
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_pairwise_complete_obs_test1,p4_pearson_pairwise_complete_obs_test1,'complete.obs')|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_pairwise_complete_obs_test1,p4_pearson_pairwise_complete_obs_test1,'everything')|
+2011-10-08 02:21:23,909 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_pairwise_complete_obs_test1,p4_pearson_pairwise_complete_obs_test1,'na.or.complete')|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_pairwise_complete_obs_test1,p4_pearson_pairwise_complete_obs_test1,'pairwise.complete.obs')|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_test1,p4_pearson_test1)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_test2,p4_pearson_test2)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_test3,p4_pearson_test3)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_test4,p4_pearson_test4)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_test5,p4_pearson_test5)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_test6,p4_pearson_test6)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |pearson(p4_pearson_test7,p4_pearson_test7)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - --cleanup ||
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_pearson_pairwise_complete_obs_test1)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_pearson_test1)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_pearson_test2)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_pearson_test3)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_pearson_test4)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_pearson_test5)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_pearson_test6)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - 	--afl |remove(p4_pearson_test7)|
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - Done Printing Parsed Vector... 
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - Starting executing the test case ...
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - No [preSetup] commands found.
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - Executing [SETUP] section.
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - Executing Command --setup
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,910 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_pearson_pairwise_complete_obs_test1 <a:double> [x=0:9,5,0, y=0:5,2,0]>
+2011-10-08 02:21:23,915 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,915 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_pearson_test1 <a:double> [x=0:9,5,0, y=0:9,5,0]>
+2011-10-08 02:21:23,919 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,919 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_pearson_test2 <a:double> [x=0:9,10,0, y=0:1,2,0]>
+2011-10-08 02:21:23,924 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,924 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_pearson_test3 <a:double> [x=0:7,8,0, y=0:5,6,0]>
+2011-10-08 02:21:23,928 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,928 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_pearson_test4 <a:double> [x=0:9,2,0, y=0:9,5,0]>
+2011-10-08 02:21:23,932 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,932 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_pearson_test5 <a:double> [x=0:10,1,0, y=0:10,11,0]>
+2011-10-08 02:21:23,938 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,938 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_pearson_test6 <a:double> [x=0:19,5,0, y=0:5,3,0]>
+2011-10-08 02:21:23,942 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,942 INFO EXECUTOR[140160741271296] - Executing query : <CREATE ARRAY p4_pearson_test7 <a:double> [x=0:5,2,0, y=0:11,4,0]>
+2011-10-08 02:21:23,946 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,946 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_pearson_pairwise_complete_obs_test1, '../p4test/p4_pearson_pairwise_complete_obs_test1.txt', 0)>
+2011-10-08 02:21:23,990 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:23,990 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_pearson_test1, '../p4test/p4_pearson_test1.txt', 0)>
+2011-10-08 02:21:24,035 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,036 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_pearson_test2, '../p4test/p4_pearson_test2.txt', 0)>
+2011-10-08 02:21:24,064 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,065 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_pearson_test3, '../p4test/p4_pearson_test3.txt', 0)>
+2011-10-08 02:21:24,102 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,102 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_pearson_test4, '../p4test/p4_pearson_test4.txt', 0)>
+2011-10-08 02:21:24,150 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,150 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_pearson_test5, '../p4test/p4_pearson_test5.txt', 0)>
+2011-10-08 02:21:24,198 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,198 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_pearson_test6, '../p4test/p4_pearson_test6.txt', 0)>
+2011-10-08 02:21:24,252 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,252 INFO EXECUTOR[140160741271296] - Executing query : <load( p4_pearson_test7, '../p4test/p4_pearson_test7.txt', 0)>
+2011-10-08 02:21:24,324 INFO EXECUTOR[140160741271296] - Executing [TEST] section.
+2011-10-08 02:21:24,324 INFO EXECUTOR[140160741271296] - Executing Command --test
+2011-10-08 02:21:24,324 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,324 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_pairwise_complete_obs_test1,p4_pearson_pairwise_complete_obs_test1,'complete.obs')>
+2011-10-08 02:21:24,338 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,338 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_pairwise_complete_obs_test1,p4_pearson_pairwise_complete_obs_test1,'everything')>
+2011-10-08 02:21:24,364 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,364 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_pairwise_complete_obs_test1,p4_pearson_pairwise_complete_obs_test1,'na.or.complete')>
+2011-10-08 02:21:24,378 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,378 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_pairwise_complete_obs_test1,p4_pearson_pairwise_complete_obs_test1,'pairwise.complete.obs')>
+2011-10-08 02:21:24,411 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,411 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_test1,p4_pearson_test1)>
+2011-10-08 02:21:24,448 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,448 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_test2,p4_pearson_test2)>
+2011-10-08 02:21:24,456 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,456 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_test3,p4_pearson_test3)>
+2011-10-08 02:21:24,477 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,477 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_test4,p4_pearson_test4)>
+2011-10-08 02:21:24,486 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,486 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_test5,p4_pearson_test5)>
+2011-10-08 02:21:24,494 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,494 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_test6,p4_pearson_test6)>
+2011-10-08 02:21:24,516 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,516 INFO EXECUTOR[140160741271296] - Executing query : <pearson(p4_pearson_test7,p4_pearson_test7)>
+2011-10-08 02:21:24,526 INFO EXECUTOR[140160741271296] - Executing [CLEANUP] section.
+2011-10-08 02:21:24,526 INFO EXECUTOR[140160741271296] - Executing Command --cleanup
+2011-10-08 02:21:24,526 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,526 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_pearson_pairwise_complete_obs_test1)>
+2011-10-08 02:21:24,542 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,542 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_pearson_test1)>
+2011-10-08 02:21:24,557 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,557 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_pearson_test2)>
+2011-10-08 02:21:24,583 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,583 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_pearson_test3)>
+2011-10-08 02:21:24,598 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,598 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_pearson_test4)>
+2011-10-08 02:21:24,609 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,609 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_pearson_test5)>
+2011-10-08 02:21:24,621 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,621 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_pearson_test6)>
+2011-10-08 02:21:24,644 INFO EXECUTOR[140160741271296] - Executing Command --afl
+2011-10-08 02:21:24,644 INFO EXECUTOR[140160741271296] - Executing query : <remove(p4_pearson_test7)>
+2011-10-08 02:21:24,652 INFO EXECUTOR[140160741271296] - Done executing the test case ...
+2011-10-08 02:21:24,652 INFO EXECUTOR[140160741271296] - EXECUTOR returning SUCCESS to the caller.

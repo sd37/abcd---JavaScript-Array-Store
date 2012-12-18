@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax
+END
+showprojectupdategraph.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/showprojectupdategraph.php
+END
+expectedbuildgroup.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/expectedbuildgroup.php
+END
+showbuildtimegraph.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/showbuildtimegraph.php
+END
+findusers.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/findusers.php
+END
+finduserproject.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/finduserproject.php
+END
+showtestfailuregraph.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/showtestfailuregraph.php
+END
+expectedinfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/expectedinfo.php
+END
+addnote.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/addnote.php
+END
+showcoveragegraph.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/showcoveragegraph.php
+END
+showtesttimegraph.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/showtesttimegraph.php
+END
+clientchecksystem.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/clientchecksystem.php
+END
+showbuildhistory.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/showbuildhistory.php
+END
+addbuildgroup.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/addbuildgroup.php
+END
+buildnote.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/buildnote.php
+END
+showbuildupdategraph.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/showbuildupdategraph.php
+END
+showtestpassinggraph.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/showtestpassinggraph.php
+END
+buildinfogroup.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CDash/!svn/ver/2306/Release-1-6-4/ajax/buildinfogroup.php
+END
